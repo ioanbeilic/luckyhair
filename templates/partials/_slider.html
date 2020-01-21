@@ -1,0 +1,40 @@
+	<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+
+
+			{% for slider in sliders %}
+
+				<!-- Slide -->
+				<div class="owl-item home_slide">
+		
+					<div class="background_image" style="background-image:url(/media/{{slider.image}});z-index:-1">
+					<div style="width:100%; height:100%; background:rgba(0,0,0,0.7); ">
+					</div>
+					</div>
+			
+
+					<div class="slide_text" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
+						<div class="slide_title">Our best offers</div>
+						<div class="slide_subtitle">Lorem ipsum dolor sit amet, consectetur</div>
+					</div>
+					<div class="slide_container">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-11">
+									<div class="slide_content" data-animation-in="fadeInRight" data-animation-out="animate-out fadeOut">
+										<div class="home_title"><h1>{{slider.title}}</h1></div>
+										<div class="home_text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien cursus faucibus finibus.</p>
+										</div>
+										<div class="home_link"><a href="#">View our offers</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+            {% endfor %} 
+			</div>
+		</div>

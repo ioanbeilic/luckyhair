@@ -1,0 +1,37 @@
+	<!-- Header -->
+
+	<header class="header trans_400">
+		<div class="header_content d-flex flex-row align-items-center justify-content-center trans_400">
+
+			<!-- Logo -->
+			<div class="logo">
+				<a href="#">
+					<div>L<span>u</span>cky</div>
+					<div>hair</div>
+				</a>
+				<div class="hamburger"><div></div><div></div><div></div></div>
+			</div>
+
+			<!-- Main Navigation -->
+			<nav class="main_nav">
+				<ul class="d-flex flex-row align-items-start justify-content-start ">
+				 	{% include 'partials/_menu.html' %}
+				 </ul>
+			</nav>
+			
+
+			<!-- Appointment -->
+			{% include 'partials/_appointment.html' %}
+	
+		</div>
+	</header>
+
+	<!-- Menu -->
+	
+	<div class="menu">
+		<nav class="menu_nav">
+			<ul class="d-flex flex-column align-items-start justify-content-start">
+				{% include 'partials/_menu.html' %}
+			</ul>
+		</nav>
+	</div>

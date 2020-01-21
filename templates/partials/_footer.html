@@ -1,0 +1,77 @@
+	{% load static %}
+    <!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background" data-image-src="{% static 'images/footer.jpg' %}"></div>
+		<div class="footer_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Contacto</h1></div>
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="row footer_row">
+					<div class="col-lg-4 footer_col">
+						<div class="contact_info">
+							<div class="footer_title">Información de Contacto</div>
+							<div class="contact_info_list">
+								<ul>
+									<li class="d-flex flex-row align-items-start justify-content-start ">
+										<div><div class="contact_info_icon"><img src="{% static 'images/placeholder.svg' %}" alt=""></div></div>
+										<div class="contact_info_content">Calle Vitoria no.3 posterior. San Fernando de Henares. Madrid</div>
+									</li>
+									<li class="d-flex flex-row align-items-center justify-content-start">
+										<div><div class="contact_info_icon"><img src="{% static 'images/phone-call.svg' %}" alt=""></div></div>
+										<div class="contact_info_content">912 318 063</div>
+									</li>
+									<li class="d-flex flex-row align-items-center justify-content-start">
+										<div><div class="contact_info_icon"><img src="{% static 'images/message.svg' %}" alt=""></div></div>
+										<div class="contact_info_content">info@luckyhayr.es</div>
+									</li>
+								</ul>
+							</div>
+							<div class="social">
+								<ul class="d-flex flex-row align-items-center justify-content-start">
+                                    <li class="social-icon"><a href="https://goo.gl/maps/CmNhqWv98o3YhkSeA"><i class="fa fa-3x fa-map-marker" aria-hidden="true"></i></a></li>
+									<li class="social-icon"><a href="https://www.facebook.com/PeluqueriaLuckyHair/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li class="social-icon"><a href="https://www.facebook.com/PeluqueriaLuckyHair/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="footer_title">Envianos un mensaje</div>
+						<div class="contact_form_container">
+
+						  {% include 'partials/_flash_messages.html' %}
+
+							<form   action="{% url 'home' %}" method="POST" id="contact_form" class="contact_form">
+                             {% csrf_token %}
+								<div>
+									<div class="row">
+										<div class="col-lg-6">
+											<input type="text" name="name" placeholder="Nombre" class="contact_input" required="required">
+										</div>
+										<div class="col-lg-6">
+											<input type="email" name="email" placeholder="E-mail" class="contact_input" required="required">
+										</div>
+									</div>
+								</div>
+								<div><input type="text" name="subject" placeholder="Asunto" class="contact_input"></div>
+								<div><textarea name="message" class="contact_input contact_textarea" placeholder="Message" required="required"></textarea></div>
+								<input type="submit" value="Enviar" class="contact_form_button">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar d-flex flex-row align-items-center justify-content-start">
+			<div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Lucky Hair. All rights reserved </div>
+		</div>
+	</footer>

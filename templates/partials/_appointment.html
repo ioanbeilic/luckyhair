@@ -1,0 +1,31 @@
+{% load static %}
+			<!-- Appointment -->
+			<div class="app trans_400">
+				<div class="app_button_container d-flex flex-row align-items-center justify-content-start">
+					<div class="app_button trans_400 d-flex flex-row align-items-center justify-content-start">
+						<div class="app_button_icon">
+                            <img src="{% static 'images/woman.svg'%}" alt="">
+                        </div>
+						<div>Pide Cita</div>
+					</div>
+					<div class="app_button_close">x</div>
+				</div>
+			</div>
+			<div class="app_content d-flex flex-column align-items-start justify-content-center">
+				<div class="app_form_container text-right">
+					<form action="#" id="app_form" class="app_form">
+						<input type="text" class="app_input" placeholder="Full Name" required="required">
+						<input type="email" class="app_input" placeholder="Email Address" required="required">
+						<input type="text" class="app_input" placeholder="Phone Number" required="required">
+						<input type="text" class="app_input" placeholder="Desired Date" required="required">
+						<select class="app_input app_select">
+							<option disabled="" selected="">Select Service</option>
+							<option>Service 1</option>
+							<option>Service 2</option>
+							<option>Service 3</option>
+							<option>Service 4</option>
+						</select>
+						<button class="app_form_button">submit</button>
+					</form>
+				</div>
+			</div>	

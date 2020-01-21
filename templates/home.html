@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="home">
+
+
+
+    {% include 'partials/_slider.html' %}
+
+		<!-- Scroll Down -->
+		<div class="scroll_down scroll_to d-flex flex-column align-items-center justify-content-center" data-scroll-to="#services">
+			<div class="scroll_icon"></div>
+			<div>Scroll Down</div>
+		</div>
+
+		<!-- Slider Progress -->
+		<div class="slide_progress">
+			<div class="slide_num">01.</div>
+			<div class="slide_bar"><div></div></div>
+		</div>
+	</div>
+
+	<!-- Services -->
+
+	<div class="services" id="services">
+		<div class="parallax_background" data-image-src="{% static 'images/services.jpg' %}"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="section_title_container">
+						<div class="section_title"><h1>Nuestros Servicios</h1></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row services_row">
+				<div class="col">
+					<div class="section_expander">
+
+						<!-- Services Slider -->
+						<div class="services_slider_container">
+							<div class="owl-carousel owl-theme services_slider">
+							
+							{% for services in services_group %}
+								<!-- Slide -->
+								<div class="owl-item">
+
+									<!-- Service -->
+
+									{% for service in services %}
+
+									<div class="service d-flex flex-row align-items-center justify-content-start trans_200">
+										<div class="service_icon"><div><img src="media/{{service.image }}" class="svg" alt=""></div></div>
+										<div class="service_content">
+											<div class="service_title trans_200">{{service.name}}</div>
+											<div class="service_text trans_200">
+												<p class="">{{service.short_description}}</p>
+											</div>
+										</div>
+									</div>
+
+									{% endfor %}
+
+								</div>
+
+							{% endfor %}
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+
+	<!-- Menu -->
+	<li{% if activate == 'home' %} class="active"{% endif %} ><a href="{% url 'home' %}">Inicio<div><div></div><div></div><div></div></div></a></li>
+	<li{% if activate == 'about' %} class="active"{% endif %} ><a href="{% url 'about' %}">Sobre Nosotros<div><div></div><div></div><div></div></div></a></li>
+	<li{% if activate == 'services' %} class="active"{% endif %} ><a href="{% url 'services' %}">Servicios<div><div></div><div></div><div></div></div></a></li>
+	<li{% if activate == 'articles' %} class="active"{% endif %} ><a href="{% url 'articles' %}">Articulos<div><div></div><div></div><div></div></div></a></li>
+	<li{% if activate == 'contact' %} class="active"{% endif %} ><a href="{% url 'contact' %}">Contacto<div><div></div><div></div><div></div></div></a></li>
+
+
